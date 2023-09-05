@@ -1,0 +1,15 @@
+# dependencies
+/node_modules
+/.git
+
+# next.js
+.next
+
+# production
+/build
+
+# debug
+yarn-error.log*
+
+# changelog
+README.md

@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+        }
+    }
+
+    html {
+        @apply scroll-smooth
+    }
+
+    body {
+        @apply bg-dark text-white flex h-screen flex-col no-scrollbar;
+    }
+
+    main {
+        @apply pt-24 flex flex-col items-center justify-between
+    }
+
+    section {
+        @apply py-24 w-full
+    }
+
+    h1 {
+        @apply text-[64px] font-bold leading-[46px]
+    }
+
+    h2 {
+        @apply text-[24px] font-bold leading-[22px]
+    }
+
+    .container {
+        @apply mx-auto max-w-[1280px] px-4;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        @apply hidden
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .bg-animate {
+        background-size: 400%;
+        -webkit-animation: gradient-wave 5s ease infinite;
+        -moz-animation: gradient-wave 5s ease infinite;
+        animation: gradient-wave 5s ease infinite;
+    }
+
+    @keyframes gradient-wave {
+        0%,
+        100% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+}
