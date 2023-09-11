@@ -35,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({ children, modal, setModal }) => {
             }}
             transition={{ type: "spring", bounce: 0, duration: 0.4 }}
             className="absolute z-10 grid h-auto w-full max-w-screen-lg grid-cols-2
-            bg-gradient-to-b from-dark items-center to-gray-700 p-5 text-white"
+            items-center bg-gradient-to-b from-dark to-gray-700 p-5 text-white"
           >
             <CloseIcon
               onClick={() => setModal(false)}

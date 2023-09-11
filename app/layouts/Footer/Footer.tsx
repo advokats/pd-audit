@@ -12,7 +12,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer>
-      <Container className="flex flex-col gap-2 items-center justify-between">
+      <Container className="flex flex-col items-center justify-between gap-2">
         <div className="flex w-full justify-between">
           <div className="flex items-center gap-10">
             <Link href="/">

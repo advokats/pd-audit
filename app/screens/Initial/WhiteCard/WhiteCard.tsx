@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
+
 import ShadowGradient from "@/app/components/ShadowGradient/ShadowGradient";
 
 interface WhiteCardProps {

@@ -5,8 +5,8 @@ import Header from "@/app/layouts/Header";
 import Layout from "@/app/layouts/Layout";
 import About from "@/app/screens/About";
 import Accountant from "@/app/screens/Accountant";
-import Initial from "@/app/screens/Initial";
 import Company from "@/app/screens/Company";
+import Initial from "@/app/screens/Initial";
 import Partners from "@/app/screens/Partners";
 import Tax from "@/app/screens/Tax";
 

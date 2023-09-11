@@ -3,11 +3,11 @@ import React from "react";
 
 import WhiteCard from "./WhiteCard";
 
+import DotsLogo from "@/app/components/DotsLogo";
 import Heading from "@/app/components/Heading";
 import Container from "@/app/layouts/Container";
 import Section from "@/app/layouts/Section";
 import { cardInformation } from "@/app/screens/Initial/defalutData";
-import DotsLogo from "@/app/components/DotsLogo";
 
 const Initial = () => {
   const list = {
