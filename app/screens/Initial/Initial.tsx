@@ -3,11 +3,13 @@ import React from "react";
 
 import WhiteCard from "./WhiteCard";
 
+import Heading from "@/app/components/Heading";
 import Container from "@/app/layouts/Container";
 import Section from "@/app/layouts/Section";
-import { cardInformation } from "@/app/screens/Main/defalutData";
+import { cardInformation } from "@/app/screens/Initial/defalutData";
+import DotsLogo from "@/app/components/DotsLogo";
 
-const Main = () => {
+const Initial = () => {
   const list = {
     visible: {
       opacity: 1,
@@ -21,10 +23,11 @@ const Main = () => {
   };
 
   return (
-    <Section>
+    <Section className="relative">
+      <DotsLogo />
       <Container className="flex flex-col items-center justify-center gap-20">
         <div className="flex flex-col items-center gap-6">
-          <h1>Ініціативний аудит</h1>
+          <Heading>Ініціативний аудит</Heading>
           <p>Перелік послуг включає:</p>
         </div>
         <motion.ul
@@ -45,4 +48,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Initial;

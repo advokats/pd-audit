@@ -1,14 +1,17 @@
+import Link from "next/link";
 import React from "react";
 
 import NavBar from "@/app/components/NavBar";
 import Container from "@/app/layouts/Container";
-import Logo from "@/public/assets/svg/logo.svg";
+import Logo from "@/public/assets/svg/_shared/logo.svg";
 
 const Header = () => {
   return (
-    <header className="fixed z-50 w-full border-b border-b-grey bg-dark">
+    <header className="fixed z-50 w-full bg-gradient-to-r from-dark to-dark">
       <Container className="flex h-24 items-center justify-between">
-        <Logo width={40} />
+        <Link href="/">
+          <Logo width={40} />
+        </Link>
         <NavBar />
       </Container>
     </header>

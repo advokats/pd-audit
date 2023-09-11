@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+const colors = require("tailwindcss/colors");
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,13 +18,20 @@ const config: Config = {
       xl: "1280px",
     },
     extend: {
-      backgroundImage: {},
+      backgroundImage: {
+        books: "url(../public/assets/img/backgrounds/books.jpg)",
+      },
     },
     colors: {
+      ...colors,
+      gradient:
+        "linear-gradient(to right top, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))",
       dark: "#101010",
-      white: "#FFFFFF",
+      midnight: "#1A1A1A",
+      coal: "#2C2C2C",
       light: "#FEFDFD",
       grey: "#A6A6A6",
+      silver: "#5A5A5A",
     },
   },
   plugins: [],
