@@ -4,11 +4,7 @@
     "es2021": true,
     "jest": true
   },
-  "plugins": [
-    "@typescript-eslint",
-    "tailwindcss",
-    "unused-imports"
-  ],
+  "plugins": ["@typescript-eslint", "tailwindcss", "unused-imports"],
   "extends": [
     "next/core-web-vitals",
     "airbnb-typescript",
@@ -30,15 +26,7 @@
     "import/order": [
       "warn",
       {
-        "groups": [
-          "builtin",
-          "external",
-          [
-            "parent",
-            "sibling"
-          ],
-          "index"
-        ],
+        "groups": ["builtin", "external", ["parent", "sibling"], "index"],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
@@ -59,10 +47,7 @@
       "error",
       {
         "required": {
-          "some": [
-            "nesting",
-            "id"
-          ]
+          "some": ["nesting", "id"]
         }
       }
     ],
@@ -70,17 +55,12 @@
       "error",
       {
         "required": {
-          "some": [
-            "nesting",
-            "id"
-          ]
+          "some": ["nesting", "id"]
         }
       }
     ]
   },
   "parserOptions": {
-    "project": [
-      "./tsconfig.json"
-    ]
+    "project": ["./tsconfig.json"]
   }
 }

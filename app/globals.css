@@ -3,77 +3,77 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+  }
+
+  @media (prefers-color-scheme: dark) {
     :root {
     }
+  }
 
-    @media (prefers-color-scheme: dark) {
-        :root {
-        }
-    }
+  html {
+    @apply scroll-smooth;
+  }
 
-    html {
-        @apply scroll-smooth
-    }
+  body {
+    @apply bg-dark text-white flex h-screen flex-col no-scrollbar;
+  }
 
-    body {
-        @apply bg-dark text-white flex h-screen flex-col no-scrollbar;
-    }
+  main {
+    @apply pt-24 flex flex-col items-center justify-between;
+  }
 
-    main {
-        @apply pt-24 flex flex-col items-center justify-between
-    }
+  section {
+    @apply py-24 w-full;
+  }
 
-    section {
-        @apply py-24 w-full
-    }
+  h1 {
+    @apply text-[64px] font-bold leading-[46px] uppercase;
+  }
 
-    h1 {
-        @apply text-[64px] font-bold leading-[46px] uppercase
-    }
+  h2 {
+    @apply text-[44px] font-bold leading-[34px];
+  }
 
-    h2 {
-        @apply text-[44px] font-bold leading-[34px]
-    }
+  h3 {
+    @apply text-[27px] font-bold leading-[29px];
+  }
 
-    h3 {
-        @apply text-[27px] font-bold leading-[29px]
-    }
+  footer {
+    @apply py-4;
+  }
 
-    footer {
-        @apply py-4
-    }
+  p {
+    @apply text-base;
+  }
 
-    p {
-        @apply text-base
-    }
+  .container {
+    @apply mx-auto max-w-[1280px] px-4;
+  }
 
-    .container {
-        @apply mx-auto max-w-[1280px] px-4;
-    }
+  .no-scrollbar::-webkit-scrollbar {
+    @apply hidden;
+  }
 
-    .no-scrollbar::-webkit-scrollbar {
-        @apply hidden
-    }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
-    .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
+  .bg-animate {
+    background-size: 400%;
+    -webkit-animation: gradient-wave 10s ease infinite;
+    -moz-animation: gradient-wave 10s ease infinite;
+    animation: gradient-wave 10s ease infinite;
+  }
 
-    .bg-animate {
-        background-size: 400%;
-        -webkit-animation: gradient-wave 10s ease infinite;
-        -moz-animation: gradient-wave 10s ease infinite;
-        animation: gradient-wave 10s ease infinite;
+  @keyframes gradient-wave {
+    0%,
+    100% {
+      background-position: 0 50%;
     }
-
-    @keyframes gradient-wave {
-        0%,
-        100% {
-            background-position: 0 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
+    50% {
+      background-position: 100% 50%;
     }
+  }
 }

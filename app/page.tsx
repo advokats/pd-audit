@@ -4,11 +4,10 @@ import Footer from "@/app/layouts/Footer";
 import Header from "@/app/layouts/Header";
 import Layout from "@/app/layouts/Layout";
 import About from "@/app/screens/About";
-import Accountant from "@/app/screens/Accountant";
 import Company from "@/app/screens/Company";
 import Initial from "@/app/screens/Initial";
 import Partners from "@/app/screens/Partners";
-import Tax from "@/app/screens/Tax";
+import Services from "@/app/screens/Services";
 
 export default function Home() {
   return (
@@ -16,8 +15,7 @@ export default function Home() {
       <Header />
       <Layout>
         <Initial />
-        <Accountant />
-        <Tax />
+        <Services />
         <About />
         <Company />
         <Partners />

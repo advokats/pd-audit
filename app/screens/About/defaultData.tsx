@@ -1,16 +1,18 @@
 import Image from "next/image";
 import React from "react";
 
+import { ProfileData } from "@/app/screens/About/Profile/types";
 import birsan from "@/public/assets/img/specialists/birsan.jpg";
 import shcherbina from "@/public/assets/img/specialists/shcherbina.jpg";
 
-export const profiles = [
+export const profiles: ProfileData[] = [
   {
     image: (
       <Image
-        className="h-[400px] object-cover"
+        priority
+        className="h-[400px] w-[400px] object-cover"
         width={400}
-        height={500}
+        height={400}
         src={birsan}
         alt="Ірина Бірсан"
       />
@@ -28,9 +30,10 @@ export const profiles = [
   {
     image: (
       <Image
-        className="h-[400px] object-cover"
+        priority
+        className="h-[400px] w-[400px] object-cover"
         width={400}
-        height={500}
+        height={400}
         src={shcherbina}
         alt="Зоя Щербина"
       />

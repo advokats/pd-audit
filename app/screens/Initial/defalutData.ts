@@ -1,6 +1,8 @@
-export const cardInformation = [
+import { CardInformationData } from "@/app/screens/Initial/types";
+
+export const cardInformation: CardInformationData[] = [
   {
-    title: "Корпоративні питання",
+    title: "Корпоративні ризики",
     subtitles: [
       "Аналіз статутних документів",
       "Аналіз відповідності організаційної форми підприємства",
@@ -8,7 +10,7 @@ export const cardInformation = [
     ],
   },
   {
-    title: "Кадри ",
+    title: "Кадрові ризики ",
     subtitles: [
       "Правила внутрішнього трудового розпорядку",
       "Оплата праці",
@@ -19,7 +21,14 @@ export const cardInformation = [
     ],
   },
   {
-    title: "Облікова політика підприємства",
+    title: "Податкові ризики",
+    subtitles: [
+      "Облікова політика підприємства",
+      "Облікова політика підприємства",
+    ],
+  },
+  {
+    title: "Бухгалтерські ризики",
     subtitles: [
       "Облікова політика підприємства",
       "Облікова політика підприємства",

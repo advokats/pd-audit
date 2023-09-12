@@ -19,7 +19,7 @@ const Company = () => {
           Праве діло
         </h1>
         <div className="grid grid-cols-2 gap-10">
-          <ShadowGradient className="from-cyan-100/20 via-cyan-300/20 to-cyan-600/20">
+          <ShadowGradient className="from-white/20 to-white/20">
             <Image className="rounded-md" src={pd} alt="Prave Dilo picture" />
           </ShadowGradient>
           <div className="flex flex-col items-center justify-center gap-4">

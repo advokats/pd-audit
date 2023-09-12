@@ -24,12 +24,9 @@ const Initial = () => {
 
   return (
     <Section className="relative">
-      <DotsLogo />
+      <DotsLogo position="right" />
       <Container className="flex flex-col items-center justify-center gap-20">
-        <div className="flex flex-col items-center gap-6">
-          <Heading>Ініціативний аудит</Heading>
-          <p>Перелік послуг включає:</p>
-        </div>
+        <Heading>Ініціативний аудит</Heading>
         <motion.ul
           initial="hidden"
           whileInView="visible"
@@ -37,7 +34,10 @@ const Initial = () => {
           variants={list}
           className="grid w-full gap-8 lg:gap-12"
         >
-          <div className="grid grid-cols-1 flex-wrap justify-center gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div
+            className="grid grid-cols-1 flex-wrap justify-center gap-5
+            md:grid-cols-2 lg:grid-cols-4"
+          >
             {cardInformation.map((card, index) => (
               <WhiteCard key={index} {...card} />
             ))}

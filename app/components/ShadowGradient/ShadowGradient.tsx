@@ -12,10 +12,10 @@ const ShadowGradient: React.FC<ShadowGradientProps> = ({
   <div className="relative">
     <div
       className={clsx(
-        `absolute -inset-2 rounded-lg bg-gradient-to-t opacity-50 blur-md ${className}`,
+        `absolute -inset-1 rounded-lg bg-gradient-to-t opacity-50 blur-md ${className}`,
       )}
     />
-    <div className="relative flex h-full items-center justify-center rounded-lg text-slate-300">
+    <div className="relative flex h-full items-center justify-center">
       {children}
     </div>
   </div>

@@ -3,20 +3,12 @@ import React from "react";
 import Heading from "@/app/components/Heading";
 import Modal from "@/app/components/Modal";
 import { profiles } from "@/app/screens/About/defaultData";
-
-interface ProfileData {
-  name: string,
-  image: React.JSX.Element | string,
-  description: string
-}
+import { ProfileData } from "@/app/screens/About/Profile/types";
 
 const Profile = () => {
   const [modal, setModal] = React.useState<boolean>(false);
-  const [selectProfile, setSelectProfile] = React.useState<ProfileData>({
-    name: "",
-    image: "",
-    description: ""
-  });
+  const [selectProfile, setSelectProfile] = React.useState<ProfileData>();
+  const { name, image, description } = selectProfile ?? {};
 
   return (
     <>
@@ -28,7 +20,7 @@ const Profile = () => {
           return (
             <div
               key={index}
-              onClick={() => setSelectProfile(profile as ProfileData)}
+              onClick={() => setSelectProfile(profile)}
               className="flex flex-col gap-2 hover:bg-grey/10"
             >
               <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
@@ -44,13 +36,15 @@ const Profile = () => {
           );
         })}
       </div>
-      <Modal {...{ modal, setModal }}>
-        <div>{selectProfile.image}</div>
-        <div className="flex flex-col gap-10">
-          <Heading>{selectProfile.name}</Heading>
-          <p>{selectProfile.description}</p>
-        </div>
-      </Modal>
+      {selectProfile && (
+        <Modal {...{ modal, setModal }}>
+          <div>{image}</div>
+          <div className="flex flex-col gap-10">
+            <Heading>{name}</Heading>
+            <p>{description}</p>
+          </div>
+        </Modal>
+      )}
     </>
   );
 };
