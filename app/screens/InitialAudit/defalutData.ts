@@ -1,4 +1,4 @@
-import { CardInformationData } from "@/app/screens/Initial/types";
+import { CardInformationData } from "@/app/screens/InitialAudit/types";
 
 export const cardInformation: CardInformationData[] = [
   {
@@ -35,3 +35,15 @@ export const cardInformation: CardInformationData[] = [
     ],
   },
 ];
+
+export const auditVariant = {
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+  },
+};

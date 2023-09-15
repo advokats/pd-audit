@@ -9,7 +9,7 @@ interface WhiteCardProps {
 const WhiteCard: React.FC<WhiteCardProps> = ({ subtitles, title }) => {
   return (
     <motion.li
-      className="flex h-full w-full flex-col items-start rounded-xl bg-white/20
+      className="flex h-full w-full flex-col items-start rounded-xl bg-white/10
       bg-gradient-to-tr from-black/50 via-silver/50 to-black/50 p-6
       backdrop-blur-lg duration-150 hover:scale-105"
     >

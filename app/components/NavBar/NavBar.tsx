@@ -3,12 +3,12 @@ import React from "react";
 
 const navigation = [
   {
-    title: "Бухгалтерський аудит",
-    url: "accountant",
+    title: "Ініціативний аудит",
+    url: "audit",
   },
   {
-    title: "Податковий аудит",
-    url: "tax",
+    title: "Послуги",
+    url: "services",
   },
   {
     title: "Спеціалісти",
