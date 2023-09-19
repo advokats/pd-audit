@@ -24,7 +24,7 @@
   }
 
   section {
-    @apply py-10 md:py-20 w-full;
+    @apply py-10 md:py-16 w-full;
   }
 
   h1 {
@@ -58,6 +58,18 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .swiper {
+    @apply h-full;
+  }
+
+  .swiper-wrapper {
+    @apply flex h-full w-full;
+  }
+
+  .swiper-slide {
+    @apply flex shrink-0;
   }
 
   .bg-animate {
