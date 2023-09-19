@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer>
       <Container className="flex flex-col items-center justify-between gap-2">
-        <div className="flex w-full justify-between">
+        <div className="flex w-full flex-col justify-between gap-10 md:flex-row md:gap-0">
           <div className="flex items-center gap-10">
             <Link href="/">
               <Logo width={40} />
@@ -28,7 +28,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-4">
             <span>Слілкуйте за нами:</span>
             <div className="flex justify-between gap-8 py-4">
               <Telegram width={32} height={32} />

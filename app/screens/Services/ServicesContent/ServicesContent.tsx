@@ -9,7 +9,7 @@ import Logo from "@/public/assets/svg/_shared/logo.svg";
 
 const ServicesContent = () => {
   const [hoverStyle, setHoverStyle] = React.useState<string>("");
-  const hoverGradient = "bg-animate from-violet-700 via-orange-800 to-pink-700";
+  const hoverGradient = "bg-animate from-violet-700 via-orange-900 to-pink-700";
 
   return (
     <div className="flex flex-col-reverse gap-4 md:flex-row md:gap-10">
