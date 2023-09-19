@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
 import React from "react";
-import { Parallax } from "react-scroll-parallax";
 
 import ServicesList from "../ServicesList";
 
