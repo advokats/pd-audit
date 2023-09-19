@@ -6,7 +6,9 @@ interface ContainerProps extends PropsWithChildren {
 }
 
 const Container: React.FC<ContainerProps> = ({ children, className }) => {
-  return <div className={clsx("container", className)}>{children}</div>;
+  return (
+    <div className={clsx("container px-4 md:px-8", className)}>{children}</div>
+  );
 };
 
 export default Container;

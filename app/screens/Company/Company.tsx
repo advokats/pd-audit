@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
+import Heading from "@/app/components/Heading";
 import ShadowGradient from "@/app/components/ShadowGradient";
 import Container from "@/app/layouts/Container";
 import Section from "@/app/layouts/Section";
@@ -12,12 +13,12 @@ const Company = () => {
   return (
     <Section>
       <Container className="flex flex-col items-center justify-center gap-20">
-        <h1
+        <Heading
           className="bg-gradient-to-t from-coal via-white
           to-light bg-clip-text py-3 text-transparent"
         >
           Праве діло
-        </h1>
+        </Heading>
         <div className="grid grid-cols-2 gap-10">
           <ShadowGradient
             className="-inset-2 bg-gradient-to-tr from-black

@@ -24,15 +24,15 @@
   }
 
   section {
-    @apply py-24 w-full;
+    @apply py-10 md:py-20 w-full;
   }
 
   h1 {
-    @apply text-[64px] font-bold leading-[46px] uppercase;
+    @apply text-[34px] md:text-[44px] text-center font-bold leading-7 md:leading-[34px] uppercase;
   }
 
   h2 {
-    @apply text-[44px] font-bold leading-[34px];
+    @apply text-[28px] text-center md:text-[44px] font-bold leading-6 md:leading-[34px];
   }
 
   h3 {
@@ -48,7 +48,7 @@
   }
 
   .container {
-    @apply mx-auto max-w-[1280px] px-4;
+    @apply mx-auto max-w-[1280px];
   }
 
   .no-scrollbar::-webkit-scrollbar {
@@ -62,9 +62,9 @@
 
   .bg-animate {
     background-size: 400%;
-    -webkit-animation: gradient-wave 10s ease infinite;
-    -moz-animation: gradient-wave 10s ease infinite;
-    animation: gradient-wave 10s ease infinite;
+    -webkit-animation: gradient-wave 5s ease infinite;
+    -moz-animation: gradient-wave 5s ease infinite;
+    animation: gradient-wave 5s ease infinite;
   }
 
   @keyframes gradient-wave {

@@ -16,7 +16,7 @@ const Profile = () => {
 
   return (
     <>
-      <div className="flex cursor-pointer gap-24">
+      <div className="flex cursor-pointer flex-col gap-10 md:flex-row md:gap-24">
         {profiles.map((profile, index) => {
           return (
             <div

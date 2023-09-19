@@ -15,9 +15,7 @@ const ShadowGradient: React.FC<ShadowGradientProps> = ({
         `absolute -inset-1 rounded-lg bg-gradient-to-t opacity-50 blur-md ${className}`,
       )}
     />
-    <div className="relative flex h-full items-center justify-center">
-      {children}
-    </div>
+    {children}
   </div>
 );
 export default ShadowGradient;

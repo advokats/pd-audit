@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const navigation = [
+export const navigation = [
   {
     title: "Ініціативний аудит",
     url: "audit",

@@ -1,3 +1,5 @@
+import clsx from "clsx";
+import Link from "next/link";
 import React from "react";
 import { Parallax } from "react-scroll-parallax";
 
@@ -6,24 +8,33 @@ import ServicesList from "../ServicesList";
 import ShadowGradient from "@/app/components/ShadowGradient";
 import Logo from "@/public/assets/svg/_shared/logo.svg";
 
-const ServicesContent = () => (
-  <div className="flex gap-10">
-    <Parallax className="flex">
+const ServicesContent = () => {
+  const [hoverStyle, setHoverStyle] = React.useState<string>("");
+  const hoverGradient = "bg-animate from-violet-700 via-orange-800 to-pink-700";
+
+  return (
+    <div className="flex flex-col-reverse gap-4 md:flex-row md:gap-10">
       <ShadowGradient
-        className="-inset-2 cursor-pointer bg-gradient-to-tr
-        from-black via-silver/20 to-black hover:from-violet-600
-        hover:to-pink-800"
+        className={clsx(
+          `-inset-2 bg-gradient-to-tr from-black via-silver/20 to-black`,
+          hoverStyle,
+        )}
       >
-        <div
-          className="flex h-full items-center justify-center rounded-md
-          bg-white/10 bg-gradient-to-tr backdrop-blur-lg"
+        <Link
+          href="https://pravoedelo.ua/"
+          target="_blank"
+          title="Сайт компанії"
+          onMouseOver={() => setHoverStyle(hoverGradient)}
+          onMouseOut={() => setHoverStyle("")}
+          className="flex h-full cursor-pointer items-center justify-center rounded-md
+            bg-white/10 bg-gradient-to-tr backdrop-blur-lg"
         >
-          <Logo className="w-1/4" />
-        </div>
+          <Logo className="w-12 py-4 md:w-1/4" />
+        </Link>
       </ShadowGradient>
-    </Parallax>
-    <ServicesList />
-  </div>
-);
+      <ServicesList />
+    </div>
+  );
+};
 
 export default ServicesContent;

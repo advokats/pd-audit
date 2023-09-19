@@ -8,7 +8,7 @@ import Section from "@/app/layouts/Section";
 
 const Services = () => (
   <Section id="services" className="z-20">
-    <Container className="flex flex-col items-center justify-center gap-20">
+    <Container className="flex flex-col items-center justify-center gap-10 md:gap-20">
       <Heading className="text-center">Послуги</Heading>
       <ServicesContent />
     </Container>

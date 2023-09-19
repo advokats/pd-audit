@@ -19,6 +19,7 @@ const DotsLogo: React.FC<DotsLogoProps> = ({ position }) => {
     if (position === "right") {
       return rightDots;
     }
+
     return leftDots;
   };
 
