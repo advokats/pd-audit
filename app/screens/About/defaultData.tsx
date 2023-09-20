@@ -10,7 +10,7 @@ export const profiles: ProfileData[] = [
     image: (
       <Image
         priority
-        className="h-[400px] w-[400px] object-cover"
+        className="object-cover md:h-[400px] md:w-[400px]"
         width={400}
         height={400}
         src={birsan}
@@ -34,7 +34,7 @@ export const profiles: ProfileData[] = [
     image: (
       <Image
         priority
-        className="h-[400px] w-[400px] object-cover"
+        className="object-cover md:h-[400px] md:w-[400px]"
         width={400}
         height={400}
         src={shcherbina}

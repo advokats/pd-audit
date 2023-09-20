@@ -10,14 +10,14 @@ import Section from "@/app/layouts/Section";
 import Profile from "@/app/screens/About/Profile";
 
 const About = () => {
-  const matches = useMediaQuery(theme.screens.sm, true);
+  const matches = useMediaQuery(theme.screens.md, true);
   const { mobileView } = useMatchesMediaQuery(!matches);
 
   return (
     <Section id="specialists" className="relative">
       {!mobileView && <DotsLogo />}
       <Container className="flex flex-col items-center justify-center gap-10 md:gap-20">
-        <Heading>Оберіть свого спеціаліста</Heading>
+        <Heading>Спеціалісти</Heading>
         <Profile />
       </Container>
     </Section>

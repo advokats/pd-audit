@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
+import ContactWrapper from "@/app/components/ContactWrapper";
 import Heading from "@/app/components/Heading";
 import Modal from "@/app/components/Modal";
 import { profiles } from "@/app/screens/About/defaultData";
@@ -60,23 +61,27 @@ const Profile = () => {
       </div>
       {selectProfile && (
         <Modal {...{ modal, setModal }}>
-          <div className="flex flex-col gap-2">
-            <div>{image}</div>
-            <div className="flex flex-col gap-2 px-2 py-4">
-              <div className="flex gap-4">
+          <div className="flex flex-row items-end justify-center gap-2 md:flex-col md:items-start md:justify-start md:gap-5">
+            <div className="w-full max-w-[140px] md:max-w-full">{image}</div>
+            <div className="flex flex-col gap-2">
+              <ContactWrapper>
                 <Telegram />
-                <p>{telegram}</p>
-              </div>
-              <div className="flex gap-4">
+                <p className="text-sm md:text-base">{telegram}</p>
+              </ContactWrapper>
+              <ContactWrapper>
                 <Phone />
-                <Link href={`tel:${phone}`}>{phone}</Link>
-              </div>
-              <Link href={url ?? ""}>Сайт фахівця</Link>
+                <Link className="text-sm md:text-base" href={`tel:${phone}`}>
+                  {phone}
+                </Link>
+              </ContactWrapper>
+              <Link className="text-sm md:text-base" href={url ?? ""}>
+                Сайт фахівця
+              </Link>
             </div>
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-4 md:gap-10">
             <Heading>{name}</Heading>
-            <p>{description}</p>
+            <p className="text-sm md:text-base">{description}</p>
           </div>
         </Modal>
       )}
