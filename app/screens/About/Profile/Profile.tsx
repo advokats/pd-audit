@@ -75,15 +75,24 @@ const Profile = () => {
             <div className="flex flex-col gap-2">
               <ContactWrapper>
                 <Telegram />
-                <p className="text-sm md:text-base">{telegram}</p>
+                <p className="text-sm hover:underline md:text-base">
+                  {telegram}
+                </p>
               </ContactWrapper>
               <ContactWrapper>
                 <Phone />
-                <Link className="text-sm md:text-base" href={`tel:${phone}`}>
+                <Link
+                  className="text-sm hover:underline md:text-base"
+                  href={`tel:${phone}`}
+                >
                   {phone}
                 </Link>
               </ContactWrapper>
-              <Link className="text-sm md:text-base" href={url ?? ""}>
+              <Link
+                target="_blank"
+                className="text-sm hover:underline md:text-base"
+                href={url ?? ""}
+              >
                 Сайт фахівця
               </Link>
             </div>
