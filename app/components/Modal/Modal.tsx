@@ -34,12 +34,13 @@ const Modal: React.FC<ModalProps> = ({ children, modal, setModal }) => {
               opacity: 0,
             }}
             transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-            className="absolute z-10 grid h-screen w-full max-w-screen-lg grid-cols-1 gap-4 bg-gradient-to-b from-dark via-silver
-            to-dark p-5 text-white md:h-auto md:grid-cols-2 md:gap-10 md:p-10"
+            className="absolute z-10 grid h-full w-full max-w-screen-lg grid-cols-1
+            gap-4 bg-gradient-to-b from-dark via-silver to-dark p-5 text-white
+            md:h-auto md:grid-cols-2 md:gap-10 md:p-10"
           >
             <CloseIcon
               onClick={() => setModal(false)}
-              className="absolute cursor-pointer right-4 top-4"
+              className="absolute right-4 top-4 cursor-pointer"
             />
             {children}
           </motion.div>

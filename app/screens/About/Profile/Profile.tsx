@@ -6,6 +6,7 @@ import Heading from "@/app/components/Heading";
 import Modal from "@/app/components/Modal";
 import { profiles } from "@/app/screens/About/defaultData";
 import { ProfileData } from "@/app/screens/About/Profile/types";
+import Arrow from "@/public/assets/svg/_shared/arrow.svg";
 import Phone from "@/public/assets/svg/_shared/phone.svg";
 import Telegram from "@/public/assets/svg/_shared/telegram.svg";
 
@@ -49,10 +50,10 @@ const Profile = () => {
                   Сайт фахівця
                 </Link>
                 <p
-                  className="text-right text-sm"
+                  className="flex items-center justify-end gap-2 text-right text-sm"
                   onClick={() => setModal(!modal)}
                 >
-                  Читати більше &#8599;
+                  Читати більше <Arrow />
                 </p>
               </div>
             </div>
@@ -61,7 +62,10 @@ const Profile = () => {
       </div>
       {selectProfile && (
         <Modal {...{ modal, setModal }}>
-          <div className="flex flex-row items-end justify-center gap-2 md:flex-col md:items-start md:justify-start md:gap-5">
+          <div
+            className="flex flex-row items-end justify-center gap-2 md:flex-col
+            md:items-start md:justify-start md:gap-5"
+          >
             <div className="w-full max-w-[140px] md:max-w-full">{image}</div>
             <div className="flex flex-col gap-2">
               <ContactWrapper>

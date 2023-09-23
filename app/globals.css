@@ -19,6 +19,10 @@
     @apply bg-dark text-white flex h-screen flex-col no-scrollbar;
   }
 
+  #shadow-host-companion {
+    @apply hidden
+  }
+
   main {
     @apply pt-24 flex flex-col items-center justify-between;
   }

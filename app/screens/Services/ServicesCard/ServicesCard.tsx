@@ -1,5 +1,7 @@
 import React from "react";
 
+import Pencil from "@/public/assets/svg/_shared/pencil.svg";
+
 interface ServicesCardProps {
   description: string;
 }
@@ -10,7 +12,9 @@ const ServicesCard: React.FC<ServicesCardProps> = ({ description }) => (
     to-black/50 p-4 backdrop-blur-lg duration-150 hover:scale-105
     md:h-20 md:gap-10"
   >
-    <p className="text-xl font-thin md:text-[34px]">&#9998;</p>
+    <div>
+      <Pencil />
+    </div>
     <p className="text-sm">{description}</p>
   </div>
 );
