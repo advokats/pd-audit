@@ -34,23 +34,28 @@ const Profile = () => {
                   {profile.image}
                 </div>
               </div>
-              <div className="flex flex-col gap-3 px-2 py-4">
-                <Heading>{profile.name}</Heading>
-                <div className="flex gap-4">
+              <div className="flex flex-col gap-2 px-2 py-4">
+                <Heading className="text-left text-4xl">{profile.name}</Heading>
+                <div className="flex gap-4 hover:underline">
                   <Telegram />
                   <p className="text-sm">{profile.telegram}</p>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 hover:underline">
                   <Phone />
                   <Link className="text-sm" href={`tel:${profile.phone}`}>
                     {profile.phone}
                   </Link>
                 </div>
-                <Link target="_blank" className="text-sm" href={profile.url}>
+                <Link
+                  target="_blank"
+                  className="text-sm hover:underline"
+                  href={profile.url}
+                >
                   Сайт фахівця
                 </Link>
                 <p
-                  className="flex items-center justify-end gap-2 text-right text-sm"
+                  className="flex items-center justify-end gap-2 text-right
+                  text-sm hover:underline"
                   onClick={() => setModal(!modal)}
                 >
                   Читати більше <Arrow />
