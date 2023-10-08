@@ -43,6 +43,10 @@
     @apply text-[28px] font-bold leading-[29px];
   }
 
+  h4 {
+    @apply text-base md:text-[18px] font-bold leading-6 md:leading-9;
+  }
+
   footer {
     @apply py-4;
   }

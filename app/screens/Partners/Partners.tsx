@@ -26,18 +26,19 @@ const Partners = () => {
           wrapperClass="flex items-center py-2 md:py-16"
           slidesPerView={mobileView ? 1 : 3}
           activeSlide={activeSlideTopSlider}
-          setActiveSlide={setActiveSlideTopSlider}>
+          setActiveSlide={setActiveSlideTopSlider}
+        >
           {partnersLogo.map(({ logo }, index) => (
             <SwiperSlide
               key={index}
-              className="flex items-start justify-center">
+              className="flex items-start justify-center"
+            >
               {logo}
             </SwiperSlide>
           ))}
         </Carousel>
       </Container>
     </Section>
-
   );
 };
 

@@ -3,6 +3,7 @@ import React from "react";
 
 import Heading from "@/app/components/Heading";
 import ShadowGradient from "@/app/components/ShadowGradient";
+import Testimonials from "../../components/Testimonials";
 import Container from "@/app/layouts/Container";
 import Section from "@/app/layouts/Section";
 import description from "@/app/screens/Company/defaultData";
@@ -11,7 +12,7 @@ import ua from "@/public/assets/img/shared/ua.png";
 
 const Company = () => (
   <Section>
-    <Container className="flex flex-col items-center justify-center gap-10 md:gap-20">
+    <Container className="flex flex-col items-center justify-center gap-10 overflow-hidden md:gap-20">
       <Heading
         className="bg-gradient-to-t from-coal via-white
         to-light bg-clip-text py-3 text-transparent"
@@ -32,6 +33,7 @@ const Company = () => (
           </ShadowGradient>
         </div>
       </div>
+      <Testimonials />
     </Container>
   </Section>
 );

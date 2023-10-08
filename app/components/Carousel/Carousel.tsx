@@ -7,11 +7,10 @@ import {
   EffectFade,
   Navigation,
   Pagination,
-  Scrollbar
+  Scrollbar,
 } from "swiper/modules";
 import { Swiper, SwiperProps, SwiperRef } from "swiper/react";
 import { Swiper as SwiperClass } from "swiper/types";
-
 
 interface CarouselProps extends SwiperProps {
   activeSlide: number;
@@ -23,19 +22,19 @@ interface CarouselProps extends SwiperProps {
 }
 
 const Carousel: React.FC<CarouselProps & RefAttributes<SwiperRef>> = ({
-                                                                        onSwiper,
-                                                                        effect = "slide",
-                                                                        slidesPerView = "auto",
-                                                                        spaceBetween = 0,
-                                                                        centeredSlides = false,
-                                                                        isAutoplay = false,
-                                                                        swiperClassName,
-                                                                        controllerSwiper,
-                                                                        activeSlide,
-                                                                        wrapperClass,
-                                                                        setActiveSlide,
-                                                                        children
-                                                                      }) => (
+  onSwiper,
+  effect = "slide",
+  slidesPerView = "auto",
+  spaceBetween = 0,
+  centeredSlides = false,
+  isAutoplay = false,
+  swiperClassName,
+  controllerSwiper,
+  activeSlide,
+  wrapperClass,
+  setActiveSlide,
+  children,
+}) => (
   <Swiper
     grabCursor
     navigation
@@ -58,16 +57,17 @@ const Carousel: React.FC<CarouselProps & RefAttributes<SwiperRef>> = ({
       Scrollbar,
       A11y,
       Controller,
-      EffectFade
+      EffectFade,
     ]}
     coverflowEffect={{
       rotate: 0,
       stretch: 20,
       scale: 0.7,
       modifier: 1,
-      slideShadows: true
+      slideShadows: true,
     }}
-    onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}>
+    onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
+  >
     {children}
   </Swiper>
 );
