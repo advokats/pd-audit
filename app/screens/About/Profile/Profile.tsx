@@ -15,6 +15,7 @@ const Profile = () => {
   const [selectProfile, setSelectProfile] = React.useState<ProfileData>();
   const { name, image, description, phone, url, telegram } =
     selectProfile ?? {};
+  const link = description?.includes("Export Legal Support");
 
   return (
     <>

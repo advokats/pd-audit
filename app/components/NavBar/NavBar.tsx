@@ -7,7 +7,7 @@ export const navigation = [
     url: "audit",
   },
   {
-    title: "Послуги",
+    title: "Що ви отримуєте",
     url: "services",
   },
   {
