@@ -18,4 +18,5 @@ const ShadowGradient: React.FC<ShadowGradientProps> = ({
     {children}
   </div>
 );
+
 export default ShadowGradient;
